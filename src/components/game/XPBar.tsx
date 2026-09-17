@@ -33,22 +33,20 @@ export const XPBar: React.FC<XPBarProps> = ({
           </span>
         </div>
       )}
-      <div className="relative w-full h-5 bg-[#2B2118] border-2 border-[#7B4BE0] rounded-full p-0.5 overflow-hidden shadow-inner">
+      <div className="relative w-full h-5.5 bg-[#2B2118] border-2 border-[#7B4BE0] rounded-full p-0.5 overflow-hidden shadow-inner flex items-center justify-center select-none">
         {/* Barra de progreso morada con gradiente */}
         <div
-          className="h-full bg-gradient-to-r from-[#7B4BE0] to-[#A06EFF] rounded-full transition-all duration-500 relative overflow-hidden"
+          className="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-[#7B4BE0] to-[#A06EFF] rounded-full transition-all duration-500 overflow-hidden"
           style={{ width: `${percentage}%` }}
         >
           {/* Brillo animado diagonal */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[shimmer_2s_infinite] -skew-x-12"></div>
         </div>
 
-        {/* Divisiones segmentadas (ticks) */}
-        <div className="absolute inset-0 flex justify-between px-2 pointer-events-none opacity-30">
-          <div className="w-0.5 h-full bg-black"></div>
-          <div className="w-0.5 h-full bg-black"></div>
-          <div className="w-0.5 h-full bg-black"></div>
-        </div>
+        {/* Texto superpuesto de XP legible siempre */}
+        <span className="relative z-10 text-[10px] font-black text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] uppercase tracking-wider">
+          {currentXP} / {nextLevelXP} XP
+        </span>
       </div>
     </div>
   );
