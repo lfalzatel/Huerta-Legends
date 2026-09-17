@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+:root {
+  --hh-sky-top: #5BC8F5;
+  --hh-sky-bottom: #A8E6FF;
+  --hh-grass: #3FA845;
+  --hh-grass-dark: #22703A;
+  --hh-soil: #8B5A2B;
+  --hh-soil-dark: #5C3A1A;
+  --hh-gold: #F2B33D;
+  --hh-gold-dark: #C1871F;
+  --hh-brick: #D65B3A;
+  --hh-panel: #FFF6E0;
+  --hh-ink: #2B2118;
+  --hh-xp: #7B4BE0;
+  --hh-danger: #E0453E;
+  --hh-success: #46C46A;
+
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-game: 'Fredoka', sans-serif;
+}
+
+body {
+  font-family: var(--font-game);
+  background-color: var(--hh-sky-top);
+  color: var(--hh-ink);
+}
+
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
+.font-game {
+  font-family: var(--font-game);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hh-soil-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hh-gold);
+  border: 2px solid var(--hh-gold-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f5c463;
+}
